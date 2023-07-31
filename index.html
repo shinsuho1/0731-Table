@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="1">
+        <caption>연습하기1</caption>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+            <th>제목5</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td rowspan="2">5</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td colspan="2">7</td>
+            <!-- <td>8</td> -->
+            <td>9</td>
+            <!-- <td>10</td> -->
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td rowspan="2" colspan="2">14</td>
+            <!-- <td>15</td> -->
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <!-- <td>19</td> -->
+            <!-- <td>20</td> -->
+        </tr>
+    </table>
+
+    <!--
+        colspan = "합쳐지는 칸수" 가로칸을 병합할때 
+        rowspan = "합쳐지는 칸수" 세로칸을 병합할때   
+    -->
+
+    <table border="1">
+        <caption>3A 시험 성적표</caption>
+        <thead>
+            <tr>
+                <th scope="col">html</th>
+                <th scope="col">csss</th>
+                <th scope="col">javascript</th>
+                <th scope="col">react</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>70점</td>
+            <td>50점</td>
+            <td>100점</td>
+            <td>0점</td>
+        </tbody>
+                <tbody>
+            <td>100점</td>
+            <td>100점</td>
+            <td>100점</td>
+            <td>100점</td>
+        </tbody>
+        <tbody>
+            <td>0점</td>
+            <td>0점</td>
+            <td>0점</td>
+            <td>0점</td>
+        </tbody>
+    </table>
+    <!-- 
+        scope : 제목셀과 내용셀의 관계를 지정한다. 
+        그래서 데이터의 의미와 관계파악을 쉽게 할 수 있게 도와준다. 
+        col/row(세로/가로)가 있다.
+     -->
+
+     <table border="2">
+        <caption>당월 결제 금액</caption>
+        <thead>
+            <tr>
+                <th colspan="5" id="a1">당월 결제하실 금액</th>
+            </tr>
+            <tr>
+                <th id="b1">회차</th>
+                <th id="b2">원금</th>
+                <th id="b3">혜택금액</th>
+                <th id="b4">환율</th>
+                <th id="b5">수수료</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td headers="a1 b1">1</td>
+                <td headers="a1 b2">1000</td>
+                <td headers="a1 b3">600</td>
+                <td headers="a1 b4">1200</td>
+                <td headers="a1 b5">400</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
